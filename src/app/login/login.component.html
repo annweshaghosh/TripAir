@@ -1,0 +1,41 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-card class="example-card">
+        <mat-card-header class="sub-header">
+            <mat-card-title class="sub-title">Enter Login Details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="example-container">
+                
+            <form #loginForm="ngForm" class="example-form" (ngSubmit)="OnLoginClick(loginForm)">
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <i class="material-icons icon">email</i>
+                                <input matInput ngModel placeholder="Username" name="txtUserName">
+                                <mat-error>
+                                    <span>Email Id is required.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width">
+                                <i class="material-icons icon">lock</i>
+                                <input matInput ngModel placeholder="Password" type="password" name="txtPassword">
+                                <mat-error>
+                                    <span>Password is required.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+                <div class="button-row">
+                    <button mat-raised-button color="primary">Login</button>
+                </div>
+            </form>
+            <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+        </mat-card-content>
+    </mat-card>
+</mat-drawer-container>

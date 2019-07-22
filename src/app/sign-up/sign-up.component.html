@@ -1,0 +1,229 @@
+<!-- Background + Search Result -->
+<div id="banner-background" class="container-fluid banner-container-about-us">
+    <div id="top-gap" class="row">
+        <p><b></b></p>
+    </div>
+    <div id="page-title" class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left" style='color:black'>				
+            <h4 class="title">
+                <b></b><span class="text-semibold"><b>Customer Signup Form</b></span>
+            </h4>
+            <!-- <ul class="breadcrumb breadcrumb-caret" style="background-color: #f8f9fa00">
+                <li><a href="https://www.trip2air.com"><b>Home</b> <b></b></a><i class="fa fa-angle-right" style="color:black"></i></li>
+                <li><a href="#"><b></b> <b>Customer Signup Form</b> <b></b></a></li>
+            </ul> -->
+        </div>	
+        <div id="filler-2" class="col-md-6 col-lg-6 col-sm-6 col-xs-6"></div>			
+    </div>				
+</div>
+<div id="about-us-middle-gap" class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <b></b>
+            <br/>
+            <b></b>
+        </div>
+    </div>
+</div>
+<div id="about-us-middle-section" class="container">			
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+           
+                <div class="container">
+                <!-- <h1>Customer Signup Form</h1> -->
+                <hr>
+                    <div class="row">
+                        <!-- edit form column -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 personal-info">
+                            <!-- <div class="alert alert-info alert-dismissable">
+                                <a class="panel-close close" data-dismiss="alert">×</a> 
+                                <i class="fa fa-coffee"></i>
+                                Provide your <strong>personal informations</strong>.
+                            </div> -->
+                            <!-- <h3>Personal info</h3> -->
+                            <mat-drawer-container class="example-container" autosize>
+                                <mat-card class="example-card">
+                                  <mat-card-header class="sub-header">
+                                    <mat-card-title class="sub-title">Provide personal informations</mat-card-title>
+                                  </mat-card-header>
+                                  <mat-card-content class="example-container">
+                                    <form class="example-form">
+                                      <table class="example-full-width" cellspacing="0">
+                                        <tr>
+                                          <td>
+                                            <mat-form-field class="example-full-width">
+                                              <i class="material-icons icon">person</i>
+                                              <input matInput ngModel placeholder="First Name" name="firstName" type="text">
+                                              <mat-error>
+                                                <span>First Name is required.</span>
+                                              </mat-error>
+                                            </mat-form-field>
+                                          </td>
+                                        </tr>
+                                      
+                                        <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">person</i>
+                                                <input matInput ngModel placeholder="Last Name" type="text" name="lastName">
+                                                <mat-error>
+                                                  <span >Last Name is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput ngModel placeholder="User Name" type="text" name="username">
+                                                <mat-error>
+                                                  <span >User Name is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                                    <mat-radio-group aria-label="Select an option" name="gender" matInput ngModel> 
+                                                            <mat-radio-button value="1">Male</mat-radio-button>
+                                                            <mat-radio-button value="2">Female</mat-radio-button>
+                                                          </mat-radio-group>
+                                                          
+                                              <!-- <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput placeholder="Last Name" type="password" name="password" formControlName="password">
+                                                <mat-error>
+                                                  <span >Last Name is required.</span>
+                                                </mat-error>
+                                              </mat-form-field> -->
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput ngModel placeholder="Address 1" type="test" name="address1">
+                                                <mat-error>
+                                                  <span >Address 1 is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">person</i>
+                                                <input matInput ngModel placeholder="Address 2" type="text" name="address2">
+                                                <!-- <mat-error>
+                                                  <span >Address 2 is required.</span>
+                                                </mat-error> -->
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput ngModel placeholder="City" type="text" name="city">
+                                                <mat-error>
+                                                  <span >City is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput ngModel placeholder="State" type="state" name="state">
+                                                <mat-error>
+                                                  <span >State is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput ngModel placeholder="Pincode" type="text" name="pincode">
+                                                <mat-error>
+                                                  <span >Pincode is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput ngModel placeholder="Email Id" type="email" name="email">
+                                                <mat-error>
+                                                  <span >Email Id is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput ngModel placeholder="Phone No" type="text" name="phone">
+                                                <mat-error>
+                                                  <span >Phone No is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput ngModel placeholder="Password" type="password" name="password">
+                                                <mat-error>
+                                                  <span >Passwprd is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <mat-form-field class="example-full-width">
+                                                <i class="material-icons icon">lock</i>
+                                                <input matInput ngModel placeholder="Confirm Password" type="password" name="c_password">
+                                                <mat-error>
+                                                  <span >Confirm Passowrd is required.</span>
+                                                </mat-error>
+                                              </mat-form-field>
+                                            </td>
+                                          </tr>
+                                      </table>
+                                      <div class="button-row">
+                                        <button mat-raised-button color="primary">Sign Up</button>
+                                      </div>
+                                   </form>
+                                    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+                                  </mat-card-content>
+                                </mat-card>
+                              </mat-drawer-container>
+                           
+                             
+                        </div>
+                    </div>
+                </div>
+               <hr>
+        </div>				
+    </div>	
+</div>	
+<div id="about-us-middle-gap" class="container">
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p><b></b></p>
+
+        <br/>
+        <p><b></b></p>
+
+    </div>
+</div>
+</div>

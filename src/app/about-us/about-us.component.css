@@ -1,0 +1,37 @@
+/* .navbar a{
+	font-size: 16px !important;
+}
+.bg-light {
+background-color: #f8f9fa8f !important;
+}
+.nav-tabs .nav-link.active {
+background-color: #ffffffd4 !important;
+border-color: #c9313d #c9313d #c9313d !important;
+}
+.form-control-lg {
+background-color: #ffffffd4 !important;
+}		 */
+.banner-container-about-us {
+    background-color: #ffc107;
+}
+.title{
+    text-align: center;
+    font-family: serif;
+    color: #a36a1e;
+    font-size: 27px;
+}
+.about-middle-section{
+    border-radius: 10px;
+    background-color: #f9eee0;
+}
+.mid-title{
+    font-size: 24px;
+    font-family: serif;
+    text-align: center;
+    padding: 12px;
+}
+.about-middle-section p{
+    font-size: 16px;
+    font-family: serif;
+    padding: 10px;
+}

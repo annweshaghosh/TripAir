@@ -1,0 +1,99 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent static-top container">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="./assets/image/logo.png" alt="Trip 2 Air">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']">HOME</a>
+        </li>
+        <li class="nav-item active">
+          <div class="dropdown">
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown">
+              COMPANY
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" [routerLink]="['/about-us']"><b>ABOUT US</b></a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" [routerLink]="['/privacy-policy']">PRIVACY POLICY</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" [routerLink]="['/terms-of-service']">TERMS OF SERVICE</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact-us']">CONTACT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="_auth.isLoggedIn()">MANAGE USERS</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <button type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown"
+              *ngIf="_auth.isLoggedIn()">
+              PROFILE
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://www.trip2air.com/edit-profile">EDIT PROFILE</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://www.trip2air.com/change-password">CHANGE PASSWORD</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.trip2air.com"></a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+              *ngIf="!_auth.isLoggedIn()">
+              SIGN UP
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" [routerLink]="['/sign-up']">CUSTOMER SIGNUP</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://www.trip2air.com/partner-signup">PARTNER SIGNUP</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.trip2air.com"></a>
+        </li>
+        <li class="nav-item">
+          <button button type="button" *ngIf="!_auth.isLoggedIn()" class="btn btn-primary" data-toggle="modal"
+            data-target="#myModal">LOGIN</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <!-- Modal body -->
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="container">
+            <!-- <h1>Customer Signup Form</h1> -->
+            <hr>
+            <div class="row">
+              <!-- edit form column -->
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 personal-info">
+                <app-login></app-login>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

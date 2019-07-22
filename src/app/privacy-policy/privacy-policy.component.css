@@ -1,0 +1,13 @@
+.banner-container-about-us {
+    background-color: #ffc107;
+}
+.title{
+    text-align: center;
+    font-family: serif;
+    color: #a36a1e;
+    font-size: 27px;
+}
+.privacy-middle-section h3,p{
+    font-family: serif;
+    text-align: center;
+}

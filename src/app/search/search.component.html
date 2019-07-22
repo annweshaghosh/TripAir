@@ -1,0 +1,197 @@
+<div id="banner-background" class="row banner-container">
+	<!-- The Modal -->
+	<div class="modal" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Enter Login Details</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+					<form (ngSubmit)="onLogin()">
+						<input type="email" name="email">
+						<input type="password" name="pwd">
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Welcome Message -->
+	<div id="welcome" class="container-fluid lighten-3 pt-2 bg-primary">
+		<div id="welcome-message" class="container">
+			<div class="row">
+				<div class="col-md-4 col-lg-4" style="color: #ffffff;">
+					<h4 *ngIf="_auth.isLoggedIn()">Welcome to Trip 2 Air.</h4>
+				</div>
+				<div class="col-md-4 col-lg-4" style="color: #ffffff;">
+					<!-- <h4>Feel the touch of air with us.</h4> -->
+				</div>
+				<div  class="col-md-4 col-lg-4" style="color: #ffffff;">
+					<h4 *ngIf="_auth.isLoggedIn()">Agent Name: Dr. S. Mamun</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Background + Search Form -->
+	<div id="filler-1" class="col-md-4 col-lg-4 col-sm-2 col-xs-2"></div>
+	<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+		<div><br /><br /></div>
+		<mat-drawer-container class="example-container" autosize>
+			<mat-card class="example-card">
+				<mat-card-header class="sub-header">
+					<mat-tab-group>
+						<mat-tab label="One-Way"> One-Way </mat-tab>
+						<mat-tab label="Return"> Return </mat-tab>
+						<mat-tab label="Multicity"> Multicity </mat-tab>
+					</mat-tab-group>
+				</mat-card-header>
+				<mat-card-content class="example-container">
+					<form class="example-form">
+						<table class="example-full-width" cellspacing="0">
+							<tr>
+								<td>
+									<mat-form-field class="example-full-width">
+										<i class="material-icons icon">flight</i>
+										<input matInput placeholder="Leaving From" name="userName">
+										<mat-error>
+											<span>Place is required.</span>
+										</mat-error>
+									</mat-form-field>
+								</td>
+								<td>
+									<mat-form-field class="example-full-width">
+										<i class="material-icons icon">flight</i>
+										<input matInput placeholder="Going To" type="password" name="password">
+										<mat-error>
+											<span>place is required.</span>
+										</mat-error>
+									</mat-form-field>
+								</td>
+							</tr>
+
+
+							<tr>
+								<td>
+									<mat-form-field>
+										<input matInput [matDatepicker]="picker" placeholder="Choose a date">
+										<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+										<mat-datepicker #picker></mat-datepicker>
+									</mat-form-field>
+								</td>
+							</tr>
+							<tr>
+
+								<td>
+									<mat-form-field class="example-full-width">
+										<i class="material-icons icon">person</i>
+										<input matInput placeholder="Adult" type="password" name="password">
+										<mat-error>
+											<span>place is required.</span>
+										</mat-error>
+									</mat-form-field>
+								</td>
+								<td>
+									<mat-form-field class="example-full-width">
+										<i class="material-icons icon">person</i>
+										<input matInput placeholder="Childs" type="password" name="password">
+										<mat-error>
+											<span>place is required.</span>
+										</mat-error>
+									</mat-form-field>
+								</td>
+								<td>
+									<mat-form-field class="example-full-width">
+										<i class="material-icons icon">person</i>
+										<input matInput placeholder="Infants" type="password" name="password">
+										<mat-error>
+											<span>place is required.</span>
+										</mat-error>
+									</mat-form-field>
+								</td>
+							</tr>
+						</table>
+						<div class="button-row">
+							<button mat-raised-button color="primary">Search</button>
+						</div>
+					</form>
+					<mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+				</mat-card-content>
+			</mat-card>
+		</mat-drawer-container>
+
+		<div><br /><br /></div>
+	</div>
+	<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
+	<div id="filler-2" class="col-sm-2 col-xs-2"></div>
+</div>
+
+<!-- why -->
+<div id="why-container" class="container-fluid lighten-3 pt-2 bg-warning">
+	<div class="row">
+		<div id="div-why" class="col-md-2 col-lg-2">
+			<h2 class="text-left"><b>Why Book With<br>Trip 2 Air?</b></h2>
+		</div>
+		<div id="div-why-points" class="col-md-10 col-lg-10">
+			<div id="why-points-row" class="row">
+				<div id="div-fast-book" class="col-lg-3 row">
+					<div class="col-md-3 col-sm-3 justify-content-center align-self-center">
+						<i class="fa fa-fighter-jet fa-3x" aria-hidden="true"></i>
+					</div>
+					<div id="filler-3a" class="col-md-1 col-lg-1"></div>
+					<div class="col-md-8">
+						<h6><b>FAST BOOKING</b></h6>
+						<div>
+							<p class="small">We offer fast booking and competitive pricing which makes amazing booking
+								experience.</p>
+						</div>
+					</div>
+				</div>
+				<div id="div-low-price" class="col-lg-3 row">
+					<div class="col-md-3 justify-content-center align-self-center">
+						<i class="fa fa-money fa-3x" aria-hidden="true"></i>
+					</div>
+					<div id="filler-3a" class="col-md-1 col-lg-1"></div>
+					<div class="col-md-8">
+						<h6><b>LOWEST PRICE</b></h6>
+						<div>
+							<p class="small">We ensure low rates on hotel reservation, holiday packages and on flight
+								tickets.</p>
+						</div>
+					</div>
+				</div>
+				<div id="div-deals" class="col-lg-3 row">
+					<div class="col-md-3 justify-content-center align-self-center">
+						<i class="fa fa-bullhorn fa-3x" aria-hidden="true"></i>
+					</div>
+					<div id="filler-3a" class="col-md-1 col-lg-1"></div>
+					<div class="col-md-8">
+						<h6><b>EXCITING DEALS</b></h6>
+						<div>
+							<p class="small">Enjoy exciting deals on flights, hotels, buses, car rental and tour
+								packages.</p>
+						</div>
+					</div>
+				</div>
+				<div id="div-24-7-support" class="col-lg-3 row">
+					<div class="col-md-3 justify-content-center align-self-center">
+						<i class="fa fa-phone-square fa-3x" aria-hidden="true"></i>
+					</div>
+					<div id="filler-3a" class="col-md-1 col-lg-1"></div>
+					<div class="col-md-8">
+						<h6><b>24/7 SUPPORT</b></h6>
+						<div>
+							<p class="small">Get assitance 24/7 on any kind of travel related query. We are happy to
+								assit you.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
